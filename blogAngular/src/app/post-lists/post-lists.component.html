@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8" >
+            <div class="barra_superior">
+                <h2 class="titulo">Lista de Posts</h2>
+                <a class="btn.btn-info.boton-new" [routerLink]="['/new/']">Nuevo Post</a>
+            </div>
+            <div class="border"   *ngFor="let post of arrPosts">
+                <img class="img-tamano" src="{{post.imagen}}"/>
+                <h1 class="titlePost">{{post.titulo}}</h1>
+                <p class="desc">{{post.descripcion}}</p>
+                <p [id]="post._id" class="contenido oculto">{{post.contenido}}</p>
+                <a class="btn btn-success boton" (click)= "mostrarComentario(post._id)">Leer más</a>
+                <a class="btn btn-primary boton" [routerLink]="['/edit', post._id]">Editar</a>
+                <a class="btn btn-secondary boton" (click)="eliminarPost(post)">Borrar</a>
+                <div class="faldon">
+                    <p class="tituloLabel">{{post.fecha}}</p>
+                    <p class="categoria">{{post.categoria}}</p>
+                </div>
+                <p class="autor">{{post.autor}}</p>    
+            </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 border" >
+            <h2 class="titulo">Nuevo Post</h2>
+            <form [formGroup]="formularioPost" (ngSubmit)="enviarDatos()">
+                <div class="form-group">
+                    <label >Fecha</label>
+                    <input type="date"   class="form-control" formControlName="fecha"/>
+                </div>
+                <div class="form-group">
+                    <label >Categoria</label>
+                    <select class="form-control" name="categoria" formControlName="categoria">
+                        <option value="tecnologia">Tecnología</option>
+                        <option value="deportes">Deportes</option>
+                        <option value="cine">Cine</option>
+                        <option value="musica">Música</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label >Titulo</label>
+                    <input type="text"   class="form-control" formControlName="titulo"/>
+                </div>
+                <div class="form-group">
+                    <label >Imagen url</label>
+                    <input type="url"   class="form-control" formControlName="imagen">
+                </div>
+                <div class="form-group">
+                    <label >Descripción</label>
+                    <input type="text" class="form-control" formControlName="descripcion">
+                </div>
+                <div class="form-group">
+                    <label >Contenido</label>
+                    <input type="text"   class="form-control" formControlName="contenido">
+                </div>
+                <div class="form-group">
+                    <label >Autor</label>
+                    <input type="text"   class="form-control" formControlName="autor">
+                </div>
+                
+                
+                <input type="submit" value="Enviar" class="btn btn-block btn-primary boton-new float-r" value="Enviar"/>
+                <a class="btn btn-primary boton" [routerLink]="['/']">Volver</a>
+            </form>
+            <!-- Hay que enganchar el formulario con el form group-->
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
