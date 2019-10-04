@@ -1,0 +1,35 @@
+extends ../layout.pug
+block content
+    .row
+        .col-2
+        .col-8
+            h2.titulo Edición del Post
+            .row.border
+                .col-12
+                    form(action="/posts/update", method='POST')
+                        .form-group
+                            label(for="date") Fecha
+                            input.form-control(type="date", name="fecha", id="date", value= fechaCreacion )
+                        .form-group
+                            label(for="categoria") Categoria
+                            input.form-control(type="text", name="categoria", value= entrada.categoria)
+                        .form-group
+                            label(for="titulo") Titulo
+                            input.form-control(type="text", name="titulo", value= entrada.titulo)
+                        .form-group
+                            label(for="imagen") Imagen url
+                            input.form-control(type="url", name="imagen", value= entrada.imagen)
+                            img(src = entrada.imagen, class="img-tamano")
+                        .form-group
+                            label(for="descripcion") Descripción
+                            input.form-control(type="text", name="descripcion", value= entrada.descripcion)
+                        .form-group
+                            label(for="contenido") Contenido
+                            input.form-control(type="text", name="contenido", value= entrada.contenido)
+                        .form-group
+                            label(for="autor") Autor
+                            input.form-control(type="text", name="autor", value= entrada.autor)
+                        input(type="hidden", name="postId", value= entrada._id)
+                        a.btn.btn-primary.btn-info.boton-new.float-l(href="/posts") Volver
+                        input.btn.btn-primary.boton-new.float-r(type="submit", value="Enviar")
+        .col-2

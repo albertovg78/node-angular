@@ -1,0 +1,19 @@
+extends ../layout.pug
+block content
+    .row
+        .col-2
+        .col-8
+            h2.titulo= entrada._id
+            .row.border
+                .col-12
+                    img(src= entrada.imagen, class="img-tamano")
+                    h1.titlePost= entrada.titulo
+                    p.desc= entrada.descripcion
+                    p.contenido= entrada.contenido
+                    div.faldon 
+                        p.tituloLabel= entrada.fecha
+                        p.categoria= entrada.categoria
+                    p.autor= entrada.autor
+                    a.btn.btn-success(onclick= "volverLista()") Volver
+        .col-2
+        

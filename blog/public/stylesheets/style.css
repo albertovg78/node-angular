@@ -1,0 +1,91 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /*background-color: #d1d7da; */
+  /*background-color: #e3eef4;*/
+  background: #f7f7f7;
+  
+}
+
+a {
+  color: #00B7FF;
+}
+.oculto{
+  display: none;
+}
+.tituloForm, .titulo{
+  color: rgb(0, 87, 133);
+  font-weight: bold;
+}
+header{
+  
+  height: 50px;
+}
+.border{
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: 1px solid #d1d7da !important;
+  background-image: linear-gradient(to bottom, #f7f7f7, #d1d7da);
+  padding: 10px;
+  margin-bottom:10px;
+  min-height: 302px;
+  height: auto;
+  
+}
+.tituloLabel{
+  color:#0c0d0d;
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 5px;
+  font-style: italic;
+}
+.categoria{
+  color: rgb(0, 87, 133);
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-style: italic;
+}
+label{
+  color: rgb(0, 87, 133);
+}
+.titlePost{
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.img-tamano{
+  display: inline-block;
+  width: 708px;
+  height: 250px;
+}
+.faldon{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  
+}
+.barra_superior{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  
+  
+}
+.boton{
+  width: 95px;
+  margin-right: 10px;
+}
+.boton-new{
+  width: 120px;
+}
+.autor{
+  color: #23b0b0;
+  font-style: italic;
+}
+.float-l{
+  float: left;
+}
+.float-r{
+  float: right;
+}

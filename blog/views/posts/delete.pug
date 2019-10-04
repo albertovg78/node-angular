@@ -1,0 +1,9 @@
+extends ../layout.pug
+
+block content     
+    .row
+        .col-2
+        .col-8
+            h2.titulo El post con titulo #{entrada.titulo} y id #{entrada._id} ha sido eliminado
+            a.btn.btn-primary.btn-info.boton-new.btn-block(href="/posts") Volver
+        .col-2

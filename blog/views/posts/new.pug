@@ -1,0 +1,38 @@
+extends ../layout.pug
+block content
+    .row
+        .col-2
+        .col-8
+            h2.titulo Nuevo Post
+            .row.border
+                .col-12
+                    form(action="/posts/create", method="POST")
+                        .form-group
+                            label(for="fecha") Fecha
+                            input.form-control(type="date", name="fecha", id="fecha")
+                        .form-group
+                            label(for="categoria") Categoria
+                            select.form-control(type="text", name="categoria")
+                                option(value="tecnologia") Tecnología
+                                option(value="deportes") Deportes
+                                option(value="Viajes") Cine
+                                option(value="musica") Música
+                        .form-group
+                            label(for="titulo") Título
+                            input.form-control(type="text", name="titulo")
+                        .form-group
+                            label(for="imagen") Url Imagen
+                            input.form-control(type="url", name="imagen")
+                        .form-group
+                            label(for="descripcion") Descripción
+                            textarea.lg-textarea.form-control(name="descripcion", cols="10", rows="2")
+                        .form-group
+                            label(for="contenido") Contenido
+                            textarea.lg-textarea.form-control(name="contenido", cols="30", rows="5")
+                            
+                        .form-group
+                            label(for="autor") Autor
+                            input.form-control(type="text", name="autor") 
+                        
+                        input.btn.btn-primary.btn-block(type="submit", value="Enviar")
+        .col-2

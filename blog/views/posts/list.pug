@@ -1,0 +1,27 @@
+extends ../layout.pug
+
+block content     
+    .row
+        .col-2
+        .col-8
+            .barra_superior
+                h2.titulo Lista de Posts
+                a.btn.btn-info.boton-new(href="/posts/new/")  Nuevo Post
+            each ent in entradas
+                .row.border 
+                    div.col-12
+                        img(src= ent.imagen, class="img-tamano")
+                        h1.titlePost= ent.titulo
+                        p.desc= ent.descripcion
+                        p(id= ent._id, class="contenido oculto")= ent.contenido
+                        a.btn.btn-success.boton(onclick= "mostrarComentario('"+ ent._id +"')") Leer más
+                        a.btn.btn-primary.boton(href="/posts/edit/" + ent._id)  Editar
+                        a.btn.btn-secondary.boton(href="/posts/delete/" + ent._id)  Borrar
+                        div.faldon
+                            p.tituloLabel= ent.fecha
+                            p.categoria= ent.categoria
+                        p.autor= ent.autor
+
+        .col-2
+
+    
